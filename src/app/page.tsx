@@ -1,15 +1,15 @@
-import Footer from '@/components/footer';
-import Navigation from '@/components/navigation';
-import Image from 'next/image';
-import Link from 'next/link';
+import { NavBar } from '@/components/bar/navbar'
+import Icon from '@/components/icon'
+import { ModeToggle } from '@/components/toggle/mode-toggle'
+import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <div className="container flex flex-row flex-wrap px-6 py-8 mx-auto 2xl:px-32 lg:px-12 lg:pb-24">
-        <Navigation />
-        <Footer />
-      </div>
-    </div>
+    <>
+      {/* <ModeToggle/> */}
+      <NavBar />
+      {/* <Icon name="airplay" /> */}
+    </>
   );
 }
