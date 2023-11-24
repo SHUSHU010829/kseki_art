@@ -16,21 +16,21 @@ export function LogInDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button>登入 ✨</Button>
+        <Button className="px-8">登入 ✨</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>登入 👋</DialogTitle>
-          <DialogDescription>登入後就可以投票及投稿！</DialogDescription>
+          <DialogDescription>歡迎觀光本站 ⸜(๑˙ᵕ ˙๑)⸝</DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
+          <Button>
+            <FaXTwitter className="mr-5 text-base" />
+            Continue with Twitter
+          </Button>
           <Button variant="outline">
             <FaGoogle className="mr-5 text-base" />
             Continue with Google
-          </Button>
-          <Button variant="outline">
-            <FaXTwitter className="mr-5 text-base" />
-            Continue with Twitter
           </Button>
         </div>
       </DialogContent>
