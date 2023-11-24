@@ -14,7 +14,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { Button } from "@/components/ui/button";
 import { LogInDialog } from "@/components/dialog/login-dialog";
 
 
@@ -58,7 +57,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function NavBar() {
   return (
-    <div className="border-b-2 p-3">
+    <div className="border-b-2 p-3 flex-grow">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>

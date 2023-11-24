@@ -1,15 +1,12 @@
 import { NavBar } from '@/components/bar/navbar'
-// import Icon from '@/components/icon'
-import { ModeToggle } from '@/components/toggle/mode-toggle'
-import { Button } from '@/components/ui/button'
-import Image from 'next/image'
+import { ToolBar } from '@/components/bar/toolbar';
+// import Image from 'next/image'
 
 export default function Home() {
   return (
-    <>
-      {/* <ModeToggle/> */}
+    <div className='flex'>
+      <ToolBar />
       <NavBar />
-      {/* <Icon name="airplay" /> */}
-    </>
+    </div>
   );
 }
