@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
-import { Inter as FontSans } from "next/font/google";
+import { Noto_Sans_TC as FontSans } from "next/font/google";
 import './globals.css'
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from '@/components/theme-provider';
 
 export const fontSans = FontSans({
   subsets: ["latin"],
-  variable: "--font-sans",
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-noto-sans-tc",
 });
 
 export const metadata: Metadata = {
