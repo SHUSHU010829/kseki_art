@@ -24,7 +24,7 @@ export default function TouristLayout({
   return (
     <>
       <div>
-        <div className="toolbar-nav-container">
+        <div className="toolbar-nav-container z-50">
           <ToolBar />
           <NavBar />
         </div>

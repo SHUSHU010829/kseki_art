@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 120 2% 100%;
+    --background: 42 14% 95%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -95,6 +95,7 @@
 } */
 
 .backdrop-invert {
+  background-color: rgba(251, 255, 251, 0.4);
   backdrop-filter: blur(5px);
 }
 

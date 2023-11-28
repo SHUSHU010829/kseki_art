@@ -51,25 +51,31 @@ export function ToolBar() {
   const router = useRouter();
 
   return (
-    <div className="border-r p-3 h-screen flex flex-col justify-between bg-white w-16">
+    <div className="border-r p-3 h-screen flex flex-col justify-between bg-[#FBFFFB] w-16">
       <div className="flex flex-col gap-5 my-auto">
         <HoverIconButton
           Icon={PiFilesDuotone}
           HoverIcon={PiFilesFill}
           tip="看文！"
-          onClick={() => {router}}
+          onClick={() => {
+            router.push("/posts");
+          }}
         />
         <HoverIconButton
           Icon={PiBookmarksDuotone}
           HoverIcon={PiBookmarksFill}
           tip="我的收藏"
-          onClick={() => {}}
+          onClick={() => {
+            router.push("/posts");
+          }}
         />
         <HoverIconButton
           Icon={PiPencilSimpleLineDuotone}
           HoverIcon={PiPencilSimpleLineFill}
           tip="發佈作品"
-          onClick={() => {}}
+          onClick={() => {
+            router.push("/write");
+          }}
         />
       </div>
       <div>
