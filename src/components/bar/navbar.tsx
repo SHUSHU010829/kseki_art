@@ -57,7 +57,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function NavBar() {
   return (
-    <div className="border-b-2 p-3 flex-grow">
+    <div className="p-3 w-screen justify-center flex fixed top-0 left-0 right-0 h-16 backdrop-invert">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
@@ -110,7 +110,7 @@ export function NavBar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <LogInDialog/>
+            <LogInDialog />
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>

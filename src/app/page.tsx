@@ -4,9 +4,11 @@ import { ToolBar } from '@/components/bar/toolbar';
 
 export default function Home() {
   return (
-    <div className='flex'>
-      <ToolBar />
-      <NavBar />
+    <div className="flex">
+      <div className="toolbar-nav-container">
+        <ToolBar />
+        <NavBar />
+      </div>
     </div>
   );
 }
