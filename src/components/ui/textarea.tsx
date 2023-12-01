@@ -1,12 +1,22 @@
-import * as React from "react"
+import * as React from "react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 export interface TextareaProps
-  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
+  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+  onContentChange?: (content: string) => void;
+}
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ className, ...props }, ref) => {
+  ({ onContentChange, className, ...props }, ref) => {
+    const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+      onContentChange?.(e.target.value);
+    };
+    const handleInput = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+      const newContent = e.target.value;
+      onContentChange?.(newContent); // 呼叫外部的onContentChange函數
+    };
+
     return (
       <textarea
         className={cn(
@@ -14,11 +24,13 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
           className
         )}
         ref={ref}
+        onChange={handleChange}
+        onInput={handleInput}
         {...props}
       />
-    )
+    );
   }
-)
-Textarea.displayName = "Textarea"
+);
+Textarea.displayName = "Textarea";
 
-export { Textarea }
+export { Textarea };
