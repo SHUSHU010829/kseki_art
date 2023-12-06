@@ -1,7 +1,9 @@
 interface PostType {
   id: number;
   title: string;
-  description: string;
+  outline: string;
   author: string;
   date: string;
+  tags: string[];
+  count: number;
 }

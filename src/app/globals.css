@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://use.typekit.net/znh5qks.js');
+
 @layer base {
   :root {
     --background: 42 14% 95%;
@@ -72,7 +74,12 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: source-han-sans-traditional, sans-serif;
   }
+}
+
+.source-han-serif {
+  font-family: source-han-serif-tc, serif;
 }
 
 .toolbar-nav-container {
