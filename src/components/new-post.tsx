@@ -29,8 +29,8 @@ const FormSchema = z.object({
   }),
   outline: z
     .string()
-    .max(200, {
-      message: "大綱不能超過 200 字",
+    .max(100, {
+      message: "大綱不能超過 100 字",
     })
     .optional(),
   readingGuide: z
@@ -170,7 +170,7 @@ export function NewPost() {
                 />
               </FormControl>
               <FormDescription className="flex justify-end">
-                {wordCountOutline} / 200
+                {wordCountOutline} / 100
               </FormDescription>
               <FormMessage />
             </FormItem>

@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { PiArrowUpRight } from "react-icons/pi";
 
 export function PostCard(props: PostType) {
   const { title, outline, author, date, tags, count } = props;
@@ -27,7 +28,16 @@ export function PostCard(props: PostType) {
         <div>{outline}</div>
       </CardContent>
       <CardFooter>
-        <p>{date}</p>
+        <div className="flex justify-end items-center w-full gap-3">
+          <div className="flex gap-2">
+            <span className="font-medium">{author}</span>
+            <span className="text-gray-500"> ▪ </span>
+            <span className="text-gray-500">{date}</span>
+          </div>
+          <div>
+            <PiArrowUpRight className="text-base" />
+          </div>
+        </div>
       </CardFooter>
     </Card>
   );
